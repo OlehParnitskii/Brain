@@ -1,0 +1,1159 @@
+    * {
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    ul li {
+        list-style: none;
+    }
+    /* font-family: 'Lemonada', cursive;
+
+font-family: 'Righteous', cursive;
+
+font-family: 'Roboto', sans-serif; */
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FFFFFF;
+        background-color: #FFAE34;
+    }
+    
+    body.hidden {
+        overflow: hidden;
+    }
+    
+    .header {
+        height: 100vh;
+        background-color: #FFAE34;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .conteiner {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .header__top {
+        background-color: #FFFAF2;
+        height: 56px;
+        position: relative;
+    }
+    
+    .header__top__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header__top__conteiner {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .logo {
+        margin: 0 0 0 5px;
+    }
+    
+    .header__menu {
+        margin-top: 10px;
+    }
+    
+    .header__menu ul li {
+        display: inline-block;
+    }
+    
+    .header__menu__list li+li {
+        padding-left: 100px;
+    }
+    
+    .header__menu__list-item {
+        font-size: 17px;
+        line-height: 20px;
+        transition: all 0.5s;
+    }
+    
+    .header__menu__list-item a:hover {
+        color: #EA3838;
+    }
+    
+    .header__menu__list-item a {
+        color: black;
+        transition: all 0.5s;
+    }
+    
+    .heder__social {
+        margin-top: 7px;
+    }
+    
+    .heder__social ul li {
+        display: inline-block;
+    }
+    
+    .heder__social__list li+li {
+        padding-left: 17px;
+    }
+    
+    .heder__social__list-item {
+        transition: all 0.5s;
+    }
+    
+    .heder__social__list-item:hover {
+        transform: scale(1.1, 1.1);
+    }
+    
+    .header__menu__phone {
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 54px;
+        right: 0;
+        transition: all .5s;
+        transform: translate(100%, 0);
+        z-index: 5;
+    }
+    
+    .header__menu__phone.active {
+        right: 100%;
+    }
+    
+    .header__menu__phone-inner {
+        height: 100vh;
+        width: 80%;
+        background-color: #FFAE34;
+        background-image: url(../images/header__menu__phone-bg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header__menu__phone__list {
+        text-align: center;
+    }
+    
+    .header__menu__phone__list li+li {
+        margin-top: 1px;
+    }
+    
+    .header__menu__phone__list-item {
+        padding: 10% 10vh 10% 10vh;
+        background-color: #C18427;
+    }
+    
+    .header__menu__phone__list-item a {
+        color: #fff;
+    }
+    
+    .menu_btn {
+        width: 56px;
+        height: 56px;
+        background: #EA3838;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 12px;
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all .5s;
+    }
+    
+    .menu_btn.pressed {
+        display: none;
+    }
+    
+    .menu_line-1 {
+        width: 32px;
+        height: 4px;
+        background: #FFFFFF;
+    }
+    
+    .menu_line-2 {
+        width: 25px;
+        height: 4px;
+        background: #FFFFFF;
+    }
+    
+    .menu_line-3 {
+        width: 12px;
+        height: 4px;
+        background: #FFFFFF;
+    }
+    
+    .close_btn {
+        display: none;
+        width: 56px;
+        height: 56px;
+        background: #EA3838;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        cursor: pointer;
+        transition: all .5s;
+    }
+    
+    .close_btn.pressed {
+        display: flex;
+    }
+    
+    .close_btn::after,
+    .close_btn::before {
+        content: "";
+        width: 32px;
+        height: 4px;
+        background-color: #ffff;
+        position: absolute;
+        transform-origin: center;
+        left: 16px;
+        top: 26px;
+    }
+    
+    .close_btn::after {
+        transform: rotate(45deg);
+        bottom: -1px;
+    }
+    
+    .close_btn::before {
+        transform: rotate(-45deg);
+        bottom: -1px;
+    }
+    
+    .header__content__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header__content-img {
+        margin-top: 0px;
+        width: 510px;
+        height: 550px;
+    }
+    
+    .header__content-img-phone {
+        display: none;
+    }
+    
+    .header__content__info {
+        margin-top: 125px;
+        text-align: center;
+    }
+    
+    .header__content__info-title {
+        font-family: 'Lemonada', cursive;
+        font-size: 48px;
+        line-height: 58px;
+        color: #FFFFFF;
+        margin-bottom: 18px;
+    }
+    
+    .header__content__info-line {
+        width: 186px;
+        height: 2px;
+        background: #FFFFFF;
+        margin-left: 210px;
+        margin-bottom: 14px;
+    }
+    
+    .header__content__info-text {
+        font-family: 'Lemonada', cursive;
+        font-size: 30px;
+        line-height: 36px;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+    }
+    
+    .header__content__info-btn-sign_up {
+        margin-right: 27px;
+    }
+    
+    .btn {
+        font-family: 'Lemonada', cursive;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 8px 19px;
+        border: 2px solid #EA3838;
+        box-shadow: 0px 4px 6px rgba(234, 56, 56, 0.15);
+        border-radius: 25px;
+        transition: all .5s;
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        background-color: #EA3838;
+    }
+    
+    .about_us {
+        margin-top: 50px;
+        padding-top: 20px;
+        background-color: #C18427;
+        position: relative;
+    }
+    
+    .about_us__title {
+        text-align: center;
+        margin-bottom: 91px;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+    }
+    
+    .about_us__inner {
+        background-image: url(../images/teacher_1.png);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 80%;
+    }
+    
+    .teacher_information {
+        font-family: 'Lemonada', cursive;
+    }
+    
+    .teacher_information-name {
+        font-size: 36px;
+        line-height: 43px;
+    }
+    
+    .teacher_information-work {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    
+    .teacher_information-line {
+        width: 262px;
+        height: 2px;
+        background: #FFFFFF;
+        margin-top: 13px;
+        margin-bottom: 36px;
+    }
+    
+    .teacher_information-list {
+        font-size: 24px;
+        line-height: 28px;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .teacher_information-list li+li {
+        padding-top: 22px;
+    }
+    
+    .about_us__teacher_information-list_item-1 {
+        padding-left: 40px;
+        position: relative;
+    }
+    
+    .about_us__teacher_information-list_item-1::before {
+        display: inline-block;
+        content: "";
+        background-image: url(../images/star.png);
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+    }
+    
+    .about_us__teacher_information-list_item-2 {
+        padding-left: 40px;
+        position: relative;
+    }
+    
+    .about_us__teacher_information-list_item-2::before {
+        display: inline-block;
+        content: "";
+        background-image: url(../images/Cup.png);
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+    }
+    
+    .about_us__teacher_information-list_item-3 {
+        padding-left: 40px;
+        position: relative;
+    }
+    
+    .about_us__teacher_information-list_item-3::before {
+        display: inline-block;
+        content: "";
+        background-image: url(../images/hand.png);
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+    }
+    
+    .teacher_information-text {
+        margin-top: 58px;
+        width: 100%;
+        padding: 33px;
+        font-size: 24px;
+        line-height: 28px;
+        font-family: 'Roboto', sans-serif;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 5;
+        position: relative;
+    }
+    
+    .about_us__teacher_information-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .about_us-continue {
+        padding-top: 10px;
+        position: relative;
+    }
+    
+    .about_us-continue__inner {
+        background-image: url(../images/teacher_2.png);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 45%;
+    }
+    
+    .about_us-continue__teacher_information {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .about_us-continue__teacher_information-name {
+        margin-top: 175px;
+    }
+    
+    .about_us-continue__teacher_information-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .about_us-continue__teacher_information-list_item-1 {
+        padding-right: 40px;
+        position: relative;
+    }
+    
+    .about_us-continue__teacher_information-list_item-1::before {
+        display: inline-block;
+        content: "";
+        background-image: url(../images/guru.png);
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 0;
+    }
+    
+    .about_us-continue__teacher_information-list_item-2 {
+        padding-right: 40px;
+        position: relative;
+    }
+    
+    .about_us-continue__teacher_information-list_item-2::before {
+        display: inline-block;
+        content: "";
+        background-image: url(../images/rocket.png);
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 0;
+    }
+    
+    .statistick {
+        padding: 16px 0 30px 0;
+        background-color: #C18427;
+        ;
+    }
+    
+    .statistick__inner {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .statistick__numbers-title {
+        font-weight: 500;
+        font-size: 96px;
+        line-height: 112px;
+        color: #FFFFFF;
+    }
+    
+    .statistick__numbers-text {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: #F3F1F1;
+        width: 241px;
+        height: 56px;
+    }
+    
+    .how_we_work {
+        padding: 80px 0 87px 0;
+    }
+    
+    .how_we_work__inner {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .how_we_work__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        padding-bottom: 60px;
+        text-align: center;
+    }
+    
+    .how_we_work__content {
+        display: flex;
+        align-items: center;
+    }
+    
+    .how_we_work__content__item {
+        width: 296px;
+        height: 280px;
+    }
+    
+    .how_we_work__content__item-img {
+        margin-left: 50%;
+        transform: translate(-50%, 0px);
+    }
+    
+    .how_we_work__content__item-text {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+    }
+    
+    .how_we_work__content_line {
+        width: 69px;
+        height: 3px;
+        background-color: #fff;
+        margin-top: -60px;
+    }
+    
+    .courses {
+        padding: 0 0 78px 0;
+    }
+    
+    .courses__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .courses__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .courses__content__item {
+        /* width: 594px;
+        height: 505px; */
+        display: inline-block;
+        border: 3px solid #FFFFFF;
+        background: #C18427;
+    }
+    
+    .courses__content__item-title {
+        padding: 25px 0 30px 0;
+        border-bottom: 3px solid #FFFFFF;
+        text-align: center;
+        font-family: 'Righteous', cursive;
+        font-size: 36px;
+        line-height: 45px;
+    }
+    
+    .courses__content__item__inner {
+        display: flex;
+    }
+    
+    .courses__content__item-list_block {
+        height: 100%;
+        padding: 28px 24px 26px 13px;
+        border-right: 3px solid #FFFFFF;
+    }
+    
+    .courses__content__item-list {
+        font-size: 20px;
+        line-height: 29px;
+        font-family: 'Lemonada', cursive;
+    }
+    
+    .courses__content__item-list li+li {
+        padding-top: 25px;
+    }
+    
+    .courses__content__item-list li {
+        padding-left: 37px;
+        position: relative;
+    }
+    
+    .courses__content__item-list li::before {
+        content: "";
+        display: inline-block;
+        background-image: url(../images/tick\ .png);
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+    }
+    
+    .courses__content__item__price__block {
+        text-align: center;
+    }
+    
+    .courses__content__item__price {
+        border-bottom: 3px solid #FFFFFF;
+        height: 138px;
+        padding: 20px 0;
+    }
+    
+    .courses__content__item__price__block span {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    
+    .price {
+        font-size: 24px;
+        line-height: 29px;
+        color: #EA3838;
+        text-decoration: line-through;
+    }
+    
+    .discount {
+        font-size: 36px;
+        line-height: 43px;
+    }
+    
+    .courses__content__item__price-button {
+        padding: 44px 62px;
+        font-size: 36px;
+        line-height: 43px;
+        color: #fff;
+        background: #EA3838;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .courses__content__item__price-button:hover {
+        background: #ffff;
+        color: #EA3838;
+    }
+    /*
+    
+    
+    .courses__content__item-title {
+    }
+    .test {
+    }
+    .courses__content__item-list {
+    }
+    .courses__content__item__price {
+    }
+    .price {
+    }
+    .discount {
+    }
+    .courses__content__item__price-button {
+    } */
+    
+    .reviews {
+        margin-bottom: 80px;
+    }
+    
+    .reviews__title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        margin-bottom: 69px;
+    }
+    
+    .reviews__slider__item {
+        width: 375px;
+        height: 500px;
+        border: 3px solid #fff;
+        padding: 30px;
+        background-color: #C18427;
+    }
+    
+    .reviews__slider__item+.reviews__slider__item {
+        margin-left: 45px;
+    }
+    
+    .reviews__slider__item__top {
+        margin-bottom: 30px;
+        display: flex;
+    }
+    
+    .reviews__slider__item__top-img {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+    
+    .reviews__slider__item__top-name {
+        margin-bottom: 14px;
+    }
+    
+    .reviews__slider__item__top-rating {
+        position: relative;
+        width: 100px;
+        height: 20px;
+        background-image: url(../images/reviews_star.png);
+        background-size: 20px auto;
+        background-repeat: repeat-x;
+    }
+    
+    .rating-star {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        height: 20px;
+        font-size: inherit;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-size: 20px auto;
+        background-repeat: repeat-x;
+    }
+    
+    .reviews__slider__item__text {
+        font-size: 20px;
+        line-height: 120%;
+    }
+    
+    .reviews__slider .slick-dots button {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #EA3838;
+        opacity: 0.4;
+        border: 1px solid #FFFFFF;
+        padding: 0;
+        font-size: 0;
+        cursor: pointer;
+        outline: none;
+    }
+    
+    .reviews__slider .slick-dots .slick-active button {
+        opacity: 1;
+    }
+    
+    .reviews__slider .slick-dots {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0px);
+    }
+    
+    .reviews__slider .slick-dots li {
+        display: inline;
+    }
+    
+    .reviews__slider .slick-dots li+li {
+        margin-left: 10px;
+    }
+    
+    .footer {
+        height: 300px;
+        background: #000F16;
+        padding: 30px 0 74px 0;
+    }
+    
+    .footer__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .footer__menu {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .footer__menu__list li {
+        display: inline;
+    }
+    
+    .footer__menu__list li+li {
+        margin-left: 90px;
+    }
+    
+    .footer__menu__list-item a {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #B6B6B6;
+        transition: all .5s;
+    }
+    
+    .footer__menu__list-item a:hover {
+        color: #ffff;
+    }
+    
+    .footer__social li {
+        display: inline;
+    }
+    
+    .footer__social {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    .footer__social__list li {
+        display: inline;
+    }
+    
+    .footer__social__list li+li {
+        margin-left: 30px;
+    }
+    
+    .footer__social__list-item img {
+        width: 50px;
+        height: 50px;
+        transition: all .5s;
+    }
+    
+    .footer__social__list-item img:hover {
+        transform: scale(1.1, 1.1);
+    }
+    
+    @media (max-width:1000px) {
+        .btn {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        .about_us__title {
+            font-size: 36px;
+            line-height: 42px;
+        }
+        .teacher_information-name {
+            font-size: 30px;
+            line-height: 36px;
+        }
+        .teacher_information-work {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .teacher_information-list {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .teacher_information-text {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .statistick__numbers-title {
+            font-size: 72px;
+            line-height: 84px;
+        }
+        .statistick__numbers-text {
+            width: 184px;
+        }
+        .how_we_work__title {
+            font-size: 34px;
+            line-height: 42px;
+        }
+        .how_we_work__content__item-img {
+            width: 166px;
+            height: 166px;
+        }
+        .how_we_work__content_line {
+            margin-top: -107px;
+        }
+        .courses__title {
+            font-size: 34px;
+            line-height: 42px;
+        }
+        .reviews__slider__item__text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    
+    @media (max-width:768px) {
+        .btn {
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .heder__social {
+            display: none;
+        }
+        .header__menu {
+            display: none;
+        }
+        .menu_btn {
+            display: flex;
+        }
+        .header__content-img {
+            margin-top: 80px;
+            width: 306px;
+            height: 330px;
+        }
+        .header__content__info-line {
+            margin-left: 143px;
+        }
+        .how_we_work__content__item-img {
+            width: 140px;
+            height: 140px;
+        }
+        .how_we_work__content_line {
+            margin-top: -115px;
+        }
+        .how_we_work__content__item-text {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .slick-slider {
+            margin-left: 55px;
+        }
+    }
+    
+    @media (max-width:480px) {
+        .header__content__inner {
+            flex-direction: column-reverse;
+            position: relative;
+        }
+        .header__content__info {
+            margin-top: 25px;
+        }
+        .btn {
+            padding-top: 20px;
+        }
+        .header__content__info-btn-sign_up {
+            position: absolute;
+            top: 300px;
+            left: 11px;
+            width: 210px;
+            height: 60px;
+        }
+        .header__content__info-btn-free_leson {
+            position: absolute;
+            top: 382px;
+            left: 11px;
+            width: 210px;
+            height: 60px;
+        }
+        .header__content-img {
+            margin-top: 10px;
+            display: none;
+        }
+        .header__content-img-phone {
+            display: block;
+            width: 225px;
+            height: 250px;
+            margin-right: 0;
+            margin-left: auto;
+        }
+        .teacher_information-text {
+            margin-top: 384px;
+        }
+        .about_us__inner {
+            background-image: url(../images/teacher_1-phone.png);
+            background-position: right 400px;
+            background-size: 73%;
+        }
+        .about_us-continue__inner {
+            background-size: 80%;
+            background-position: left 215px;
+        }
+        .about_us-continue__teacher_information-list_item-2 {
+            text-align: right;
+        }
+        .about_us-continue__teacher_information-name {
+            text-align: right;
+            margin-top: 14px;
+        }
+        .teacher_information-text {
+            width: 107%;
+            position: relative;
+            left: -16px;
+            margin-top: 350px;
+        }
+        .about_us-continue__teacher_information-text {
+            width: 107%;
+            position: relative;
+            left: 15px;
+            margin-top: 310px;
+        }
+        .statistick__inner {
+            flex-wrap: wrap;
+        }
+        .statistick__numbers-title {
+            font-size: 40px;
+            line-height: 44px;
+            text-align: center;
+            margin-left: -20px;
+        }
+        .statistick__numbers-text {
+            font-size: 17px;
+            line-height: 19px;
+        }
+        .how_we_work__title {
+            font-size: 30px;
+            line-height: 36px;
+        }
+        .how_we_work__content {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .how_we_work__content_line {
+            display: none;
+        }
+        .courses__title {
+            font-size: 30px;
+            line-height: 34px;
+        }
+    }
+    
+    @media (max-width:320px) {
+        .header__content__info-title {
+            font-size: 30px;
+            line-height: 36px;
+        }
+        .header__content__info-line {
+            margin-left: 55px;
+        }
+        .header__content__info-text {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .header__content__info-text {
+            margin-bottom: -10px;
+        }
+        .header__content-img-phone {
+            width: 175px;
+            height: 200px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .header__content__info-btn-sign_up {
+            position: absolute;
+            top: 340px;
+            left: 45px;
+            width: 210px;
+            height: 60px;
+        }
+        .header__content__info-btn-free_leson {
+            position: absolute;
+            top: 411px;
+            left: 45px;
+            width: 210px;
+            height: 60px;
+        }
+        .about_us__title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 0;
+        }
+        .teacher_information-name {
+            font-size: 17px;
+            line-height: 22px;
+            text-align: center;
+        }
+        .teacher_information-work {
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+        }
+        .teacher_information-line {
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .teacher_information-list li {
+            margin-left: 50px;
+            font-size: 17px;
+            line-height: 19px;
+        }
+        .about_us__inner {
+            background-position: right 266px;
+        }
+        .teacher_information-text {
+            width: 111%;
+            margin-top: 229px;
+        }
+        .about_us-continue__teacher_information-list li {
+            text-align: right;
+            margin-left: 0;
+            margin-right: 50px;
+        }
+        .about_us-continue__inner {
+            background-position: left 256px;
+        }
+        .statistick__numbers-text {
+            width: 130px;
+        }
+        .how_we_work {
+            padding: 50px 0 0 0;
+        }
+        .reviews__slider__item__text {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .reviews__slider__item+.reviews__slider__item {
+            margin-left: 0;
+        }
+        .slick-slider {
+            margin-left: 3px;
+        }
+        .slick-slider {
+            margin-left: 3px;
+        }
+        .footer__title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .footer__menu__list-item a {
+            font-size: 17px;
+            line-height: 19px;
+        }
+        .footer__menu__list li+li {
+            margin-left: 15px;
+        }
+    }
+    /* .courses__title {
+    }
+    .courses__content {
+    }
+    .courses__content__item {
+    }
+    .courses__content__item-title {
+    }
+    .test {
+    }
+    .courses__content__item-list {
+    }
+    .courses__content__item__price {
+    }
+    .price {
+    }
+    .discount {
+    }
+    .courses__content__item__price-button {
+    } */
